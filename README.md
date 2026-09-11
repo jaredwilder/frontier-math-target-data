@@ -1,42 +1,36 @@
-# frontier-math-target-data
+# Open-problem and technique data
 
-Target registries, problem shapes, and a normalized technique catalog for attacking open
-mathematics, plus the Erdos problems database in one YAML file.
+A public data collection for open mathematics: problem registries, structural classifications, a normalized catalog of published techniques, and an Erdős-problems database in one YAML file.
 
 Author: Jared Wilder. First public timestamp: 2026-09-10. Data dated 2026-07-18.
 
-## What is here
+## Contents
 
-| file | what it is |
+| file | contents |
 |---|---|
-| `targets/erdos_problems.yaml` | 13,452 lines, one record per Erdos problem: number, prize, open/closed state with a last-update date, OEIS cross-references, Lean formalization state, and tags |
-| `targets/ORACLE-KBK-UNIFIED-TARGET-REGISTRY-ROUND2` | the unified registry of attackable targets |
-| `targets/ORACLE-KBK-PROBLEM-SHAPES-ROUND2` | a classification of open problems by structural shape |
-| `targets/ORACLE-KBK-TECHNIQUE-REGISTRY-NORMALIZED` | a normalized catalog of published mathematical techniques with stable identifiers |
-| `targets/ORACLE-KBK-TECHNIQUE-PROBLEM-SHAPE-EDGES-ROUND2` | which technique classes apply to which problem shapes |
+| `targets/erdos_problems.yaml` | 13,452 lines, one record per Erdős problem: number, prize, open/closed state with update date, OEIS cross-references, Lean formalization state, and tags |
+| `targets/ORACLE-KBK-UNIFIED-TARGET-REGISTRY-ROUND2` | unified registry of mathematical targets |
+| `targets/ORACLE-KBK-PROBLEM-SHAPES-ROUND2` | classification of open problems by structural shape |
+| `targets/ORACLE-KBK-TECHNIQUE-REGISTRY-NORMALIZED` | normalized catalog of published mathematical techniques with stable identifiers |
+| `targets/ORACLE-KBK-TECHNIQUE-PROBLEM-SHAPE-EDGES-ROUND2` | links between technique classes and problem shapes |
 | `targets/ORACLE-KBK-EXPANDED-CANDIDATE-FAMILIES-ROUND2` | candidate problem families |
-| `targets/ORACLE-KBK-TARGET-SCORING-SCHEMA` | how a target's payoff was scored, with the schema exposed |
-| `ammo/` | the attack ammunition documents: summaries of published techniques and where they bite |
+| `targets/ORACLE-KBK-TARGET-SCORING-SCHEMA` | historical scoring schema used to prioritize targets |
+| `ammo/` | summaries of published techniques and the kinds of problems to which they apply |
 
-## What is deliberately NOT here
+The filenames retain the terminology of the original research system; the mathematical content is ordinary problem metadata and technique indexing.
 
-Three files from the same directory are **withheld**: the composite battle plans, the composite
-superblades, and 8.7 MB of derived launch objects.
+## Publication boundary
 
-Those encode how the machine chooses which technique to fire at which target and in what
-composition. That is method, not mathematics, and it is the author's to keep. Everything above is
-data about open problems and published techniques, which is useful to anyone and secret to nobody.
+Three source files from the same historical workspace are not public: composite strategy plans, composite technique-selection files, and about 8.7 MB of derived launch data.
 
-Saying which files were held back, and why, seemed better than quietly shipping a subset.
+Those files encode a private research workflow for selecting and composing techniques. They are not needed to use the public problem and literature data above. The separation is recorded explicitly so the public dataset has a clear boundary.
 
 ## Provenance
 
-`erdos_problems.yaml` is derived from the Erdos problems community database maintained by Thomas
-Bloom at erdosproblems.com, with the teorth/erdosproblems data as its source. **Openness is that
-database's marking, not the author's.** The same rule governs the companion frontier at
-github.com/jaredwilder/open-math-frontier, which holds 9,926 targets from seven sources with 8,501
-carrying a callable mechanical verifier.
+`erdos_problems.yaml` is derived from the Erdős Problems community database maintained by Thomas Bloom at erdosproblems.com, using the `teorth/erdosproblems` data as its source. Open/closed status is inherited from that database rather than assigned by this repository.
+
+The companion `jaredwilder/open-math-frontier` combines multiple public sources into a larger index of 9,926 targets, 8,501 of which carry a callable finite/mechanical checker.
 
 ## License
 
-Apache-2.0 for the material authored here. The Erdos problem database retains its upstream terms.
+Apache-2.0 for material authored here. The Erdős problem database retains its upstream terms.
