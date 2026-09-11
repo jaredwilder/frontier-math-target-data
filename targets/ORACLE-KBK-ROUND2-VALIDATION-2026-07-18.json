@@ -1,0 +1,24 @@
+{
+  "compiled_on": "2026-07-18",
+  "registry_techniques": 57,
+  "general_techniques": 39,
+  "problem_shapes": 140,
+  "new_candidate_families": 701,
+  "unified_targets": 2132,
+  "technique_target_edges": 27716,
+  "battle_plans": 2132,
+  "launch_objects": 6396,
+  "composite_superblades": 30,
+  "war_room_queue": 400,
+  "matrix_edges_per_target_unique": [
+    13
+  ],
+  "launch_objects_per_target_unique": [
+    3
+  ],
+  "duplicate_target_ids": 0,
+  "duplicate_launch_ids": 0,
+  "unknown_technique_references": 0,
+  "errors": [],
+  "status": "PASS"
+}

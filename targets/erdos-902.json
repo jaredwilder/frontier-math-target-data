@@ -1,0 +1,43 @@
+{
+ "targetId": "ERDOS-902",
+ "sourceStatement": "Let f(n) be minimal such that there is a tournament (a complete directed graph) on f(n) vertices such that every set of n vertices is dominated by at least one other vertex. Estimate f(n). Erdos [Er63c] proved 2^(n+1)-1 <= f(n) << n^2 2^n; Szekeres and Szekeres [SzSz65] proved f(3)=19 and n 2^n << f(n). f(1)=3 and f(2)=7 are easy to check.",
+ "sourceUrl": "https://www.erdosproblems.com/902",
+ "statusDate": "2026-07-27 (open per erdosproblems.com; status read from the operator-supplied page text, NOT live-fetched by this blade)",
+ "nearestPrior": "Erdos [Er63c] 2^(n+1)-1 <= f(n) << n^2 2^n; Szekeres & Szekeres [SzSz65] f(3)=19 and n 2^n << f(n); Graham & Spencer [GrSp71] constructive weaker bound. Upper and lower bounds differ by a factor of n.",
+ "successCriterion": "Close the factor-n gap between n 2^n and n^2 2^n, OR decide a new exact value f(n) for n >= 4, OR move a bound at a finite N by an exact certificate (SAT witness => f(n) <= N; UNSAT refutation => f(n) > N).",
+ "formalPredicateRef": "oracle/kbk/engine/tournament_bridge.py::build_cnf (S(N,n), Tseitin, exact)",
+ "conditionalityLabels": [
+  "finite-computational",
+  "unconditional-at-decided-N"
+ ],
+ "testSuite": [
+  {
+   "caseId": "S(2,1)",
+   "description": "f(1)=3 so 2 vertices cannot carry S_1",
+   "expectedUnderRealStatement": "excluded",
+   "predicateValue": false,
+   "knownException": true
+  },
+  {
+   "caseId": "S(3,1)",
+   "description": "the 3-cycle carries S_1; f(1)=3",
+   "expectedUnderRealStatement": "satisfies",
+   "predicateValue": true,
+   "knownException": true
+  },
+  {
+   "caseId": "S(6,2)",
+   "description": "f(2)=7 so 6 vertices cannot carry S_2",
+   "expectedUnderRealStatement": "excluded",
+   "predicateValue": false,
+   "knownException": true
+  },
+  {
+   "caseId": "S(7,2)",
+   "description": "the Paley tournament on 7 carries S_2; f(2)=7",
+   "expectedUnderRealStatement": "satisfies",
+   "predicateValue": true,
+   "knownException": true
+  }
+ ]
+}

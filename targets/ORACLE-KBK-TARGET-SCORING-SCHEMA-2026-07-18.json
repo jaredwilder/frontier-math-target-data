@@ -1,0 +1,77 @@
+{
+  "version": "1.0",
+  "snapshot_date": "2026-07-18",
+  "score_range": [
+    0,
+    100
+  ],
+  "tiers": {
+    "S": "94-100: launch immediately",
+    "A": "86-93: high-value next wave",
+    "B": "76-85: strong campaign",
+    "C": "64-75: side-gate or longer-horizon",
+    "D": "0-63: direct headline attack usually low ROI"
+  },
+  "dimensions": {
+    "finite_frontier_clarity": {
+      "weight": 16,
+      "definition": "Is there a smallest unknown parameter or bounded claim?"
+    },
+    "certificate_strength": {
+      "weight": 14,
+      "definition": "Can success emit a small independently checkable witness/proof log?"
+    },
+    "symmetry_reduction_fit": {
+      "weight": 10,
+      "definition": "Can group actions collapse the search space?"
+    },
+    "formalization_readiness": {
+      "weight": 10,
+      "definition": "Is the statement already formalized or easy to formalize precisely?"
+    },
+    "headline_delta": {
+      "weight": 14,
+      "definition": "Would an exact value/bound/construction/classification be publishable?"
+    },
+    "compute_feasibility": {
+      "weight": 12,
+      "definition": "Can a calibrated run fit available/remote compute?"
+    },
+    "method_transfer": {
+      "weight": 10,
+      "definition": "Does the target reuse validated Oracle blades?"
+    },
+    "literature_status_confidence": {
+      "weight": 8,
+      "definition": "Can current open status and nearest prior be verified?"
+    },
+    "failure_asset_value": {
+      "weight": 6,
+      "definition": "Would a failed lane yield a rigorous negative result or useful cost data?"
+    }
+  },
+  "hard_gates": [
+    "Current status independently verified",
+    "Formal predicate audited against source statement",
+    "Nearest prior result identified",
+    "Success criterion fixed before run",
+    "Independent verifier planned",
+    "Receipt path and checkpointing configured",
+    "Conditionality/trust labels declared"
+  ],
+  "penalties": {
+    "grand_conjecture_direct_front_door": -20,
+    "no_finite_frontier": -12,
+    "no_certificate_path": -10,
+    "status_uncertain": -15,
+    "known memory overrun without redesign": -12,
+    "only heuristic numerics": -8
+  },
+  "recommended_allocation": {
+    "S": 0.35,
+    "A": 0.35,
+    "B": 0.2,
+    "C": 0.08,
+    "D": 0.02
+  }
+}
