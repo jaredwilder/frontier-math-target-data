@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it."
+title: "Open-problem and technique data"
+authors:
+  - family-names: "Wilder"
+    given-names: "Jared"
+type: dataset
+repository-code: "https://github.com/jaredwilder/frontier-math-target-data"
+license: Apache-2.0
